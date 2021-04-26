@@ -10,8 +10,7 @@ namespace TestGitSync1
     {
         static void Main(string[] args)
         {
-            var a = new[] { 1, 2, 3 };
-            
+
             Console.Write("Please enter your name: ");
             string name = Console.ReadLine();
             Console.WriteLine("Hello, {0}!", name);
