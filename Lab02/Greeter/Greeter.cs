@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace TestGitSync1
+namespace Greeter
 {
     class Program
     {

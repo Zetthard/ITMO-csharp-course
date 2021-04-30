@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Divider
 {
-    class Divideit
+    class Divider
     {
         static void Main(string[] args)
         {
