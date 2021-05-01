@@ -40,7 +40,6 @@ namespace WhatDay1
                     monthnum++;
                 }
 
-
             // end:
             
             MonthName temp = (MonthName)monthnum;
