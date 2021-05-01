@@ -38,8 +38,7 @@ namespace Struct
             }
             catch (FormatException ex)
             {
-                Console.WriteLine("Account number expected.");
-                Console.WriteLine("Unapropriate input. {0}", ex);
+                Console.WriteLine("Unapropriate input. Account number expected. {0}", ex);
             }
             Console.Read();
         }
