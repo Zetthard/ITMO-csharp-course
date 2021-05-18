@@ -5,10 +5,14 @@ namespace Utils
     class Utils
     {
 
-    //
-    // Return the larger of two integer values
-    //
+        //
+        // Return the larger of two integer values
+        //
 
+    public static bool IsItFormattable(object x)
+    {
+        return x is IFormattable;
+    }
     public static int Greater(int a, int b)
     {
         if (a>b)
@@ -58,7 +62,7 @@ namespace Utils
                 f = 1;
                 for (k=2; k<=n; ++k)
                 {
-                    f *= k;
+                    f = f * k;
                 }       
 
                 // Here is a terse alternative
@@ -126,12 +130,5 @@ namespace Utils
 
         return ok;
     }
-        public static void Reverse(ref string s)
-        {
-            string sRev = "";
-            for (int k = s.Length - 1; k >= 0; k--)
-                sRev += s[k];
-            s = sRev;
-        }
     }
 }

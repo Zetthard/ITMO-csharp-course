@@ -5,10 +5,29 @@ namespace Utils
     class Utils
     {
 
-    //
+    public static void Display(object item)
+        {
+            IPrintable ip;
+            ip = item as IPrintable;
+            if (ip != null)
+                ip.Print();
+            else
+                Console.WriteLine("{0}", item.ToString());
+        }
+	public static bool IsItFormattable(object x)
+	{
+		// Use is to test if the object has the
+		// IFormattable iterface
+
+		if (x is IFormattable)
+			return true;
+		else
+			return false;
+	}
+
+	//
     // Return the larger of two integer values
     //
-
     public static int Greater(int a, int b)
     {
         if (a>b)
@@ -17,7 +36,7 @@ namespace Utils
             return b;
 
         // Alternative version - more terse
-        // return (a>b) > (a) : (b);
+        // return (a>b) ? (a) : (b);
     }
 
     //
@@ -58,7 +77,7 @@ namespace Utils
                 f = 1;
                 for (k=2; k<=n; ++k)
                 {
-                    f *= k;
+                    f = f * k;
                 }       
 
                 // Here is a terse alternative
@@ -126,12 +145,5 @@ namespace Utils
 
         return ok;
     }
-        public static void Reverse(ref string s)
-        {
-            string sRev = "";
-            for (int k = s.Length - 1; k >= 0; k--)
-                sRev += s[k];
-            s = sRev;
-        }
     }
 }
