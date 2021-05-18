@@ -31,8 +31,8 @@ class BankAccount
     public decimal Deposit(decimal put)
     {
         if (put > 0)
-            accBal += put;    
-        return accBal;
+            accBal += put;
+        return accBal;   
     }
 
     public bool Withdraw(decimal take)
